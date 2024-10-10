@@ -3,7 +3,7 @@ import MonthDropdown from './MonthDropdown'
 import CountryName from './CountryName'
 import Warning from './assets/warning.svg'
 
-function MoreInfo({ formData, setFormData, inputHandler, posts, formErrors }) {
+function MoreInfo({ formData, setFormData, inputHandler, posts, formErrors, setFilteredData, filteredData }) {
   return (
 
     <div className="MoreInfo">
@@ -37,7 +37,12 @@ function MoreInfo({ formData, setFormData, inputHandler, posts, formErrors }) {
         <div className='country'>
           <div className="input">
             <label>Country</label>
-            <CountryName formData={formData} setFormData={setFormData} posts={posts} formErrors={formErrors} />
+            <CountryName formData={formData}
+              setFormData={setFormData}
+              posts={posts}
+              formErrors={formErrors}
+              filteredData={filteredData}
+              setFilteredData={setFilteredData} />
           </div>
 
           {formErrors.country && (

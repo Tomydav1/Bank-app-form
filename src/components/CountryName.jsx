@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import CloseBtn from './assets/close-btn.svg'
 import Warning from './assets/warning.svg'
 
-function CountryName({formData, setFormData, posts, formErrors}) {
-  const [filteredData, setFilteredData] = useState([]);
+function CountryName({formData, setFormData, posts, formErrors, setFilteredData, filteredData}) {
   const [search, setSearch] = useState(false);
 
   const filterHandler = (e) => {

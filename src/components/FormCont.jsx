@@ -11,6 +11,7 @@ function FormCont() {
 
   const [page, setPage] = useState(0);
   const [posts, setPosts] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -134,6 +135,10 @@ function FormCont() {
       alert('We have sent a link to your email address')
     }
 
+    if (page === 1){
+      setFilteredData([])
+    }
+
     e.preventDefault()
     setFormErrors(dontKnow)
   }
@@ -173,6 +178,8 @@ function FormCont() {
                   setFormData={setFormData}
                   inputHandler={handleInputChange}
                   posts={posts}
+                  setFilteredData={setFilteredData}
+                  filteredData={filteredData}
                   formErrors={formErrors} />
               </div>
               <div className="form-cont">

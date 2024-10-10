@@ -254,13 +254,12 @@ input::-webkit-inner-spin-button {
   width: 14px;
 }
 .form .container .right-cont .MoreInfo .country .countryResults {
-  margin-top: 5px;
+  margin-top: 4px;
   border: 1px solid var(--container-border);
   position: absolute;
   top: 100%;
   z-index: 4;
-  left: 0;
-  width: 100%;
+  width: calc(100% - 2px);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 8px;
   background: #ffffff;
@@ -272,6 +271,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid rgb(224, 224, 224);
 }
 .form .container .right-cont .MoreInfo .country .countryResults .results img {
   width: 20px;
@@ -329,8 +329,18 @@ input::-webkit-inner-spin-button {
 .form .container .right-cont .buttons .prev {
   color: black;
   background-color: var(--primary-color);
+  transition: 0.3s;
+}
+.form .container .right-cont .buttons .prev:hover {
+  background-color: #f7f7f7;
+  transform: translateY(-2px);
 }
 .form .container .right-cont .buttons .next {
   color: white;
   background: var(--secondary-color);
+  transition: 0.3s;
+}
+.form .container .right-cont .buttons .next:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
 }/*# sourceMappingURL=App.css.map */
